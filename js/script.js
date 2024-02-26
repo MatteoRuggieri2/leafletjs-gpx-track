@@ -25,14 +25,19 @@ var gpx = '../assets/gpx-tracks/2023-09-26_1324761719_Gpx Valle dei Principi - S
 //   map.fitBounds(e.target.getBounds());
 // }).addTo(map);
 
-// Chat GPT
+// Esempio di Chat GPT
 new L.GPX(gpx, {
     async: true,
     polyline_options: {
         color: 'red',
         weight: 3,
         opacity: 0.7
-    }
+    },
+    marker_options: {
+        startIconUrl: '../assets/icons/Start-Map-Marker-HeadPin-Green.512.png',
+        endIconUrl: '../assets/icons/Start-Map-Marker-HeadPin-Red.512.png',
+        shadowUrl: ''
+      }
 }).on('loaded', function (e) {
     map.fitBounds(e.target.getBounds());
 }).addTo(map);
