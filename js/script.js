@@ -37,7 +37,7 @@ new L.GPX(gpx, {
         startIconUrl: '../assets/icons/Start-Map-Marker-HeadPin-Green.512.png',
         endIconUrl: '../assets/icons/Start-Map-Marker-HeadPin-Red.512.png',
         shadowUrl: ''
-      }
+    }
 }).on('loaded', function (e) {
     map.fitBounds(e.target.getBounds());
 }).addTo(map);
