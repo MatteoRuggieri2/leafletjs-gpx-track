@@ -13,3 +13,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+
+// GPX Track
+var gpx = '../assets/gpx-tracks/2023-09-26_1324761719_Gpx Valle dei Principi - Sito MonteRosaSki.gpx'; // URL to your GPX file or the GPX itself
+
+// Esempio Documentazione
+new L.GPX(gpx, {
+    async: true,
+}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
