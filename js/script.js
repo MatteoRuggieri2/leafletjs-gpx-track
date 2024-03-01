@@ -94,7 +94,7 @@ function writeDOM() {
 
 
     // Tempo tot (da ms a ore 05:47)
-    
+    gpxTotalTime = msToTime(15782576);
 
     // Altitudine min (da float a int senza arrotond.)
     
@@ -109,8 +109,25 @@ function writeDOM() {
     // Scrivo nel DOM
     gpxNameDOM.innerHTML = gpxName;
     gpxDistanceDOM.innerHTML = `${gpxDistance} (Km)`;
-    gpxTotalTimeDOM.innerHTML = `${gpxTotalTime} (ms)`;
+    gpxTotalTimeDOM.innerHTML = `${gpxTotalTime} (Ore)`;
     gpxElevationMinDOM.innerHTML = `${gpxElevationMin} (m)`;
     gpxElevationMaxDOM.innerHTML = `${gpxElevationMax} (m)`;
     gpxElevationGainDOM.innerHTML = `${gpxElevationGain} (m)`;
+}
+
+/*
+Questa funzione ha il compito di convertire i millisecondi
+nel formato [hh:mm]
+*/
+function msToTime(msDurata) {
+    var millisecondi = parseInt((msDurata%1000)/100)
+        , secondi = parseInt((msDurata/1000)%60)
+        , minuti = parseInt((msDurata/(1000*60))%60)
+        , ore = parseInt((msDurata/(1000*60*60))%24);
+
+    ore = (ore < 10) ? "0" + ore : ore;
+    minuti = (minuti < 10) ? "0" + minuti : minuti;
+    secondi = (secondi < 10) ? "0" + secondi : secondi;
+
+    return ore + ":" + minuti;
 }
