@@ -71,6 +71,7 @@ new L.GPX(gpx, {
     gpxElevationMax = e.target.get_elevation_max();
     gpxElevationGain = e.target.get_elevation_gain();
 
+    // Scrivo nel DOM i dati della traccia GPX
     writeDOM();
 
 }).addTo(map);
