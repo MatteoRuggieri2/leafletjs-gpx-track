@@ -86,8 +86,29 @@ Questa funzione ha il compito di assegnare i valori
 negli elementi del DOM.
 */
 function writeDOM() {
+
+    // Converto i dati
+
+    // Distanza tot (da m a km 10,9)
+    gpxDistance = parseFloat((gpxDistance / 1000).toFixed(1));
+
+
+    // Tempo tot (da ms a ore 05:47)
+    
+
+    // Altitudine min (da float a int senza arrotond.)
+    
+
+    // Altitudine max (da float a int senza arrotond.)
+
+
+    // Dislivello complessivo (da float a int senza arrotond.)
+
+
+
+    // Scrivo nel DOM
     gpxNameDOM.innerHTML = gpxName;
-    gpxDistanceDOM.innerHTML = `${gpxDistance} (m)`;
+    gpxDistanceDOM.innerHTML = `${gpxDistance} (Km)`;
     gpxTotalTimeDOM.innerHTML = `${gpxTotalTime} (ms)`;
     gpxElevationMinDOM.innerHTML = `${gpxElevationMin} (m)`;
     gpxElevationMaxDOM.innerHTML = `${gpxElevationMax} (m)`;
