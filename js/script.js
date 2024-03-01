@@ -97,7 +97,7 @@ function writeDOM() {
     gpxTotalTime = msToTime(15782576);
 
     // Altitudine min (da float a int senza arrotond.)
-    
+    gpxElevationMin = parseInt(gpxElevationMin);
 
     // Altitudine max (da float a int senza arrotond.)
 
