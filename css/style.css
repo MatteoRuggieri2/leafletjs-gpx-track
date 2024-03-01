@@ -4,9 +4,23 @@
     box-sizing: border-box;
 }
 
+/* Leaflet MAP */
 #map {
     height: 60vW;
     max-height: 100vh;
+}
+
+/* Disclamer */
+.disclamer {
+    background-color: lightgray;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* GPX Track Title */
+#gpx-title {
+    display: inline-block;
 }
 
 /* ! IL MARKER "END" COPRE IL MARKER "START" */
