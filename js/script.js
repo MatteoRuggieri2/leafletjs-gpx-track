@@ -92,7 +92,6 @@ function writeDOM() {
     // Distanza tot (da m a km 10,9)
     gpxDistance = parseFloat((gpxDistance / 1000).toFixed(1));
 
-
     // Tempo tot (da ms a ore 05:47)
     gpxTotalTime = msToTime(15782576);
 
@@ -100,6 +99,7 @@ function writeDOM() {
     gpxElevationMin = parseInt(gpxElevationMin);
 
     // Altitudine max (da float a int senza arrotond.)
+    gpxElevationMax = parseInt(gpxElevationMax);
 
 
     // Dislivello complessivo (da float a int senza arrotond.)
